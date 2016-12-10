@@ -13,6 +13,9 @@ module.exports = class UploadController extends BaseController{
       return;
     }
     
+    // 定义global filter
+    this.global_filter = ['koa-bodyparser']
+    
     // 定义中间件
     this.upload = multer(this.app.opts.upload) 
   }
